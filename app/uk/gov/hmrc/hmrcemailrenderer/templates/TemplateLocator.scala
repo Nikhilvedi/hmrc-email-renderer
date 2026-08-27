@@ -63,6 +63,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.raldGroup
 import uk.gov.hmrc.hmrcemailrenderer.templates.registeryourcompany.RegisterYourCompanyTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.sdil.SdilTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.sdlt.SdltTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tamc.TamcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tcs.TcsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine.TransactionEngineTemplates
@@ -109,6 +110,8 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.tre.treTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.carf.CARFTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.lepp.LEPPTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.olg.OlgTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.childbenefit.ChildBenefitTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.vpd.VPDTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -165,6 +168,7 @@ trait TemplateLocator {
       "Lost Credentials"      -> LostCredentialsTemplates.templates,
       "FHDDS"                 -> FhddsTemplates.templates,
       "SDIL"                  -> SdilTemplates.templates,
+      "SDLT"                  -> SdltTemplates.templates,
       "CCA"                   -> CCATemplates.templates,
       "CDS"                   -> cdsTestTemplates.templates,
       "MTDfB-VAT"             -> MtdfbVatTemplates.templates,
@@ -202,7 +206,9 @@ trait TemplateLocator {
       "Personal Tax"          -> NIRefTemplates.templates,
       "Pillar 2"              -> Pillar2Templates.templates,
       "LEPP"                  -> LEPPTemplates.templates,
-      "OLG"                   -> OlgTemplates.templates
+      "OLG"                   -> OlgTemplates.templates,
+      "Child Benefit"         -> ChildBenefitTemplates.templates,
+      "VPD"                   -> VPDTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq

@@ -808,6 +808,20 @@ object TemplateParams {
       "tax_estimate_message_alert_cy" -> Map(
         "fullName" -> "Mr Joe Bloggs"
       ),
+      "daily_tax_estimate_message_alert" -> Map(
+        "fullName" -> "Leslie Carter"
+      ),
+      "daily_tax_estimate_message_alert_cy" -> Map(
+        "fullName" -> "Leslie Carter"
+      ),
+      "annual_tax_estimate_message_alert" -> Map(
+        "fullName" -> "Leslie Carter",
+        "taxYear"  -> "2027"
+      ),
+      "annual_tax_estimate_message_alert_cy" -> Map(
+        "fullName" -> "Leslie Carter",
+        "taxYear"  -> "2027"
+      ),
       "fandf_ask_help_notification" -> Map(
         "helperLastName"  -> "Bloggs",
         "helperFirstName" -> "Joe",
@@ -2287,6 +2301,10 @@ object TemplateParams2 {
       "name"            -> "Joe Bloggs",
       "referenceNumber" -> "IM123456789A"
     ),
+    "sdlt_submission_confirmation" -> Map(
+      "purchaserName" -> "John Doe",
+      "utrn"          -> "UTRN0113"
+    ),
     "digital_tariffs_case_completed" -> Map(
       "recipientName_line1" -> "FULL NAME",
       "reference"           -> "ATaR REFERENCE",
@@ -2567,10 +2585,11 @@ object TemplateParams2 {
       "serviceContent"         -> "Erbyn hyn, gallwch wneud cais am Ddyfarniad Tariffau Uwch."
     ),
     "ecc_subscription_not_successful" -> Map(
-      "recipientName_FullName" -> "Jane Jones",
-      "recipientOrgName"       -> "JJ Components",
-      "serviceName"            -> "Advance Tariff Rulings",
-      "completionDate"         -> "22 March 2019"
+      "recipientName_FullName" -> "Harry Potter",
+      "recipientOrgName"       -> "Hogwarts Trains",
+      "serviceName"            -> "Customs Declaration Service",
+      "completionDate"         -> "17 June 2026",
+      "enrolmentKey"           -> "HMRC-CUS-ORG"
     ),
     "ecc_subscription_not_successful_cy" -> Map(
       "recipientName_FullName" -> "Jane Jones",
@@ -4245,6 +4264,10 @@ object TemplateParams3 {
       "accountingPeriodStart" -> "1 April 2024",
       "accountingPeriodEnd"   -> "31 March 2025"
     ),
-    "one_login_setup_complete" -> Map("name" -> "Mr John Smith")
+    "one_login_setup_complete" -> Map(
+      "obfuscatedEmail" -> "j***@example.com",
+      "ggIdEnding"      -> "1234"
+    )
   )
+
 }
